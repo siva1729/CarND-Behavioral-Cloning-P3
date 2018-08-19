@@ -1,4 +1,4 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning ** 
 
 **Behavioral Cloning Project**
 
@@ -25,9 +25,9 @@ The goals / steps of this project are the following:
 [image12]: ./examples/normal_small.png "Normal Image"
 
 
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-###1. Submission includes all required files and can be used to run the simulator in autonomous mode
+### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * model.py containing the script to create and train the model
@@ -35,19 +35,19 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md summarizing the results
 
-###2. Submission includes functional code
+### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.h5
 ```
 
-###3. Submission code is usable and readable
+### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-###1. An appropriate model architecture has been employed
+### 1. An appropriate model architecture has been employed
 
 After considering few initial simple models for training the data, I have chosen the Nvidia's CNN model 
 that was employed in the end-to-end training approach using fron-facing camera images.
@@ -92,18 +92,18 @@ layer. The five convolutional layers are followed by 3 fully connected layers an
 a output steering angle value.The fully connected layers are designed to function as controller for steering.
 
 
-###2. Attempts to reduce overfitting in the model
+### 2. Attempts to reduce overfitting in the model
 
 The module showed overfitting during the initial runs when the image data was only from center images.
 To avoid model overfitting data was augnmented using the left and right images from the camera using
 slight correction of center image steering angle. Also the images are flipped with steering angle reversed
 to add additional data to help with overfitting. The model later did not show overfitting with augmented data.
 
-###3. Model parameter tuning
+### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 123).
 
-###4. Appropriate training data
+### 4. Appropriate training data
 
 The training data was added uding the image data from track one. Training data from center image data with
 steering angle data and also the images from left/right camera data is taken with slight correction of the
@@ -111,9 +111,9 @@ steering angle. The training data is augmented with flipped images using the cv2
 steering angle reversed. Additional data is collected for the curves on the path to help with training.
 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-###1. Solution Design Approach
+### 1. Solution Design Approach
 
 To arrive at the appropriate model for achieving the autonomous driving, initially started with the
 classic LeNet model that become popular with image classification. The network had (2) Convultional
@@ -140,14 +140,14 @@ the model was trained again with this additional data using the saved model.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Final Model Architecture
+### 2. Final Model Architecture
 The final model architecture (model.py lines 108-120 ) consisted of the CNN with the following layers and layer sizes.
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
 ![alt text][image8]
 
-###3. Creation of the Training Set & Training Process
+### 3. Creation of the Training Set & Training Process
 
 To capture the driving behaviour, I have first recorded the data for one lap trying to stay in the center of the road.
 This data worked well with autonomous driving but the car was going off track at curves and where there are no lane markings.
@@ -197,7 +197,7 @@ show much improvement. The data was plotted by capturing the history object (mod
 
 I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
-###Summary
+### Summary
 It was good experience doing this project relaizing the importance of data collection for autonomous driving and
 how the network model characteristics were changes (overfitting/underfitting) with the data augmentation.
 During training using the keras generator function helped with the memory and accerlation issues.
