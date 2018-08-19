@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image5]: ./examples/al_r.png "Recovery Image"
 [image6]: ./examples/ac_r.png "Recovery Image"
 [image7]: ./examples/ar_r.png "Recovery Image"
-[image8]: ./examples/network_keras.jpg "Normal Image"
+[image8]: ./examples/network_keras.JPG "Normal Image"
 [image9]: ./examples/flip_small.png "Flipped Image"
 [image10]: ./examples/model_loss.png "Model MSE Loss Image"
 [image11]: ./examples/normal_cropped.png "Cropped Image"
